@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductCard } from '../product-card/product-card';
 import { Product } from '../../interfaces/product';
-import { milkshakes } from '../../data/products';
+import { iceCoffee, icecreams, milkshakes, smoothies } from '../../data/products';
 
 @Component({
   selector: 'app-home-page',
@@ -11,4 +11,7 @@ import { milkshakes } from '../../data/products';
 })
 export class HomePage {
   milkshakes: Product[] = milkshakes;
+  icecreams: Product[] = icecreams;
+  smoothies: Product[] = smoothies;
+  iceCoffees: Product[] = iceCoffee;
 }

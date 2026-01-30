@@ -7,3 +7,27 @@
         }
     </div>
 </section>
+<section class="products-container">
+    <h2 class="section-title">Sorvetes</h2>
+    <div class="grid">
+        @for (icecream of icecreams; track icecream.id) {
+        <app-product-card [product]="icecream"></app-product-card>
+        }
+    </div>
+</section>
+<section class="products-container">
+    <h2 class="section-title">Smoothies</h2>
+    <div class="grid">
+        @for (smoothie of smoothies; track smoothie.id) {
+        <app-product-card [product]="smoothie"></app-product-card>
+        }
+    </div>
+</section>
+<section class="products-container">
+    <h2 class="section-title">Cafés gelados</h2>
+    <div class="grid">
+        @for (iceCoffee of iceCoffees; track iceCoffee.id) {
+        <app-product-card [product]="iceCoffee"></app-product-card>
+        }
+    </div>
+</section>
