@@ -1,0 +1,83 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  background-color: #3b51a4;
+  color: white;
+  padding: 10px 0 10px 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } }
+
+.footer-social {
+  display: flex;
+  flex-direction: row; /* Muda para linha (um ao lado do outro) */
+  align-items: center; /* Alinha o texto verticalmente com as imagens */
+  justify-content: center; /* Centraliza o bloco inteiro na tela */
+  gap: 10px; /* Define a distância entre o texto e os ícones */
+  margin-bottom: 10px;
+}
+
+/* Certifique-se de que o parágrafo não tenha margem atrapalhando o alinhamento */
+.footer-social p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Garante alinhamento vertical */
+}
+
+/* Estilização dos Links e Imagens */
+.social-icons a {
+  display: inline-block; /* Permite transformar (scale) */
+  text-decoration: none;
+  background-color: transparent; /* Garante fundo transparente no link */
+  transition: transform 0.2s;
+}
+
+.social-icons img {
+  width: 26px;  /* Tamanho da imagem - ajuste conforme necessário */
+  height: 26px;
+  display: block; /* Remove espaço extra abaixo da imagem */
+  background-color: transparent; /* Garante fundo transparente na imagem */
+  object-fit: contain; /* Evita distorção */
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+}
+
+.footer-credits {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-credits p {
+  margin: 0;
+}
