@@ -1,8 +1,8 @@
-import { Component, computed, effect, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { ProductCard } from '../product-card/product-card';
 import { Product } from '../../interfaces/product';
-import { iceCoffee, icecreams, milkshakes, smoothies } from '../../data/products';
 import { DecimalPipe } from '@angular/common';
+import { ProductsService } from '../../services/products-service';
 
 @Component({
   selector: 'app-home-page',
@@ -11,10 +11,12 @@ import { DecimalPipe } from '@angular/common';
   styleUrl: './home-page.css',
 })
 export class HomePage {
-  milkshakes: Product[] = milkshakes;
-  icecreams: Product[] = icecreams;
-  smoothies: Product[] = smoothies;
-  iceCoffees: Product[] = iceCoffee;
+  private productService = inject(ProductsService);
+
+  milkshakes: Product[] = this.productService.getMilkshakes();
+  icecreams: Product[] = this.productService.getIceCreams();
+  smoothies: Product[] = this.productService.getSmoothies();
+  iceCoffees: Product[] = this.productService.getIceCoffees();
 
   cartItens = signal(0);
 
